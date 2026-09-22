@@ -1,0 +1,763 @@
+/* =========================
+   1. SELECTOR UNIVERSAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/* =========================
+   2. SELECTOR TAG
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   HEADER
+   CSS: Sticky + Transition
+========================= */
+
+header {
+    background-color: white;
+
+    padding: 15px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* SELECTOR CLASS */
+
+.logo {
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #4b6cb7;
+}
+
+
+/* SELECTOR CHILD */
+
+header nav > ul {
+    display: flex;
+
+    list-style: none;
+
+    gap: 25px;
+}
+
+header nav ul li a {
+    color: #333;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+/* PSEUDO-CLASS :hover */
+
+header nav ul li a:hover {
+    color: #4b6cb7;
+}
+
+
+/* =========================
+   HERO
+   CSS: Background
+   CSS: Transform
+   CSS: Transition
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    padding: 80px 10%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 50px;
+
+    background-image:
+        linear-gradient(
+            rgba(75, 108, 183, 0.85),
+            rgba(24, 40, 72, 0.9)
+        ),
+        url("images/background.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+}
+
+
+.hero-text {
+    max-width: 600px;
+}
+
+
+.hero-text h1 {
+    font-size: 50px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero-text h1 span {
+    color: #ffd166;
+}
+
+
+.hero-text p {
+    font-size: 19px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.button {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    margin-right: 10px;
+
+    background-color: #ffd166;
+
+    color: #333;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+/* TRANSFORM + TRANSITION */
+
+.button:hover {
+    transform: translateY(-5px);
+
+    background-color: white;
+}
+
+
+.button-contact {
+    background-color: transparent;
+
+    border: 2px solid white;
+
+    color: white;
+}
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-image img {
+    width: 280px;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 7px solid white;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3);
+
+    transition: 0.5s;
+}
+
+
+.hero-image img:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   SECTION CHUNG
+========================= */
+
+section {
+    padding: 70px 10%;
+}
+
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+
+.section-title h2 {
+    font-size: 35px;
+
+    color: #4b6cb7;
+
+    margin-bottom: 10px;
+}
+
+
+.section-title p {
+    color: #777;
+}
+
+
+/* PSEUDO-ELEMENT */
+
+.section-title h2::after {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+
+    height: 4px;
+
+    margin: 10px auto;
+
+    background-color: #ffd166;
+
+    border-radius: 5px;
+}
+
+
+/* =========================
+   GIỚI THIỆU
+========================= */
+
+.about {
+    background-color: white;
+}
+
+
+.about-content {
+    display: flex;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+
+.about-text {
+    flex: 1;
+}
+
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+
+/* SELECTOR DESCENDANT */
+
+.about-text strong {
+    color: #4b6cb7;
+}
+
+
+.about-box {
+    flex: 1;
+
+    padding: 30px;
+
+    background-color: #f5f7fa;
+
+    border-radius: 15px;
+
+    border-left: 5px solid #4b6cb7;
+}
+
+
+.about-box p {
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   KỸ NĂNG
+   CSS: Border
+   CSS: Transform
+========================= */
+
+.skills {
+    background-color: #f5f7fa;
+}
+
+
+.skill-list {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+
+.skill {
+    padding: 12px 22px;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+
+/* TRANSFORM: SCALE */
+
+.skill:hover {
+    transform: scale(1.1);
+
+    background-color: #4b6cb7;
+
+    color: white;
+}
+
+
+/* =========================
+   DỰ ÁN
+   CSS: Multiple Columns
+========================= */
+
+.projects {
+    background-color: white;
+}
+
+
+.project-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.project {
+    background-color: #f5f7fa;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.1);
+
+    transition: 0.4s;
+}
+
+
+/* TRANSITION */
+
+.project:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+.project img {
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: cover;
+}
+
+
+.project-content {
+    padding: 20px;
+}
+
+
+.project-content h3 {
+    color: #4b6cb7;
+
+    margin-bottom: 10px;
+}
+
+
+.project-content p {
+    color: #666;
+
+    margin-bottom: 15px;
+}
+
+
+.project-content a {
+    color: #4b6cb7;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   HÀNH TRÌNH
+========================= */
+
+.journey {
+    background-color: #f5f7fa;
+}
+
+
+.timeline {
+    max-width: 800px;
+
+    margin: auto;
+
+    border-left: 4px solid #4b6cb7;
+
+    padding-left: 30px;
+}
+
+
+.timeline-item {
+    background-color: white;
+
+    padding: 20px;
+
+    margin-bottom: 25px;
+
+    border-radius: 10px;
+
+    position: relative;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* PSEUDO-ELEMENT */
+
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    width: 15px;
+
+    height: 15px;
+
+    background-color: #ffd166;
+
+    border: 3px solid #4b6cb7;
+
+    border-radius: 50%;
+
+    left: -42px;
+
+    top: 25px;
+}
+
+
+.timeline-item h3 {
+    color: #4b6cb7;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================
+   BÀI VIẾT
+========================= */
+
+.blog {
+    background-color: white;
+}
+
+
+.blog-layout {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 30px;
+}
+
+
+.post {
+    padding: 25px;
+
+    background-color: #f5f7fa;
+
+    border-radius: 15px;
+
+    margin-bottom: 20px;
+
+    transition: 0.3s;
+}
+
+
+.post:hover {
+    transform: translateX(5px);
+}
+
+
+.post h3 {
+    color: #4b6cb7;
+
+    margin-bottom: 10px;
+}
+
+
+.post p {
+    color: #666;
+}
+
+
+/* =========================
+   ASIDE
+========================= */
+
+aside {
+    padding: 25px;
+
+    background-color: #f5f7fa;
+
+    border-radius: 15px;
+
+    height: fit-content;
+}
+
+
+aside h3 {
+    color: #4b6cb7;
+
+    margin-bottom: 15px;
+}
+
+
+aside ul {
+    list-style: none;
+}
+
+
+aside li {
+    margin-bottom: 10px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+aside a {
+    color: #555;
+}
+
+
+aside a:hover {
+    color: #4b6cb7;
+}
+
+
+/* =========================
+   FOOTER
+   CSS: Multiple Background
+========================= */
+
+footer {
+    padding: 50px 10% 20px;
+
+    background-image:
+        linear-gradient(
+            rgba(24, 40, 72, 0.95),
+            rgba(24, 40, 72, 0.95)
+        ),
+        url("images/background.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+
+    text-align: center;
+}
+
+
+footer h2 {
+    margin-bottom: 15px;
+}
+
+
+.social {
+    margin: 20px 0;
+}
+
+
+.social a {
+    display: inline-block;
+
+    margin: 0 10px;
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+
+.social a:hover {
+    color: #ffd166;
+
+    transform: scale(1.1);
+}
+
+
+.top-button {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 10px 20px;
+
+    border: 1px solid white;
+
+    border-radius: 20px;
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+
+.top-button:hover {
+    background-color: white;
+
+    color: #182848;
+}
+
+
+.copyright {
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid rgba(255,255,255,0.3);
+
+    color: #ccc;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media screen and (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .about-content {
+        flex-direction: column;
+    }
+
+
+    .project-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .blog-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    header nav > ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 10px;
+    }
+
+
+    .hero-text h1 {
+        font-size: 35px;
+    }
+
+
+    .hero-image img {
+        width: 220px;
+
+        height: 220px;
+    }
+
+
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+
+
+    section {
+        padding: 50px 6%;
+    }
+}
